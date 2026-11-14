@@ -1,3 +1,5 @@
+const dns=require('dns');
+dns.setServers(['1.1.1.1', '1.0.0.1']);
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
@@ -12,6 +14,7 @@ const Admin = require('./models/Admin');
 const Blog = require('./models/Blog');
 
 dotenv.config();
+
 
 const app = express();
 const port = process.env.PORT || 5000;
